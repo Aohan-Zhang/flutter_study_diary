@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study_diary/20230907/flex_demo.dart';
+import 'package:flutter_study_diary/20230907/stack_demo.dart';
+import 'package:flutter_study_diary/20230907/wrap_demo.dart';
 import 'package:flutter_study_diary/diary_layout.dart';
 import 'package:flutter_study_diary/c03/dice_page.dart';
 import 'package:flutter_study_diary/c01/layout_basic.dart';
@@ -30,17 +33,41 @@ class _CatalogueState extends State<Catalogue> {
           padding: const EdgeInsets.only(left: 10, top: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              catalogueItem(context: context, target: const LayoutBasic()),
-              catalogueItem(context: context, target: const MyInfoCard()),
-              catalogueItem(context: context, target: const DicePage()),
-              catalogueItem(context: context, target: const SimplePiano()),
-              catalogueItem(context: context, target: const Questioner()),
+            children: [
+              diaryItem(
+                time: "忘记时间了",
+                content: [
+                  catalogueItem(context: context, target: const LayoutBasic()),
+                  catalogueItem(context: context, target: const MyInfoCard()),
+                  catalogueItem(context: context, target: const DicePage()),
+                  catalogueItem(context: context, target: const SimplePiano()),
+                  catalogueItem(context: context, target: const Questioner()),
+                ],
+              ),
+              diaryItem(
+                time: "2023年09月07日23:25:30",
+                content: [
+                  catalogueItem(context: context, target: const FlexDemo()),
+                  catalogueItem(context: context, target: const WrapDemo()),
+                  catalogueItem(context: context, target: const StackDemo()),
+                ],
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Column diaryItem({required String time, required List<Widget> content}) {
+    return Column(children: [
+      Text(time),
+      Wrap(
+        spacing: 5,
+        direction: Axis.horizontal,
+        children: content,
+      )
+    ]);
   }
 
   ElevatedButton catalogueItem({
