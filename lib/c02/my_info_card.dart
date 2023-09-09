@@ -6,7 +6,7 @@ class MyInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       context: context,
       content: Column(
         mainAxisAlignment: MainAxisAlignment.center,

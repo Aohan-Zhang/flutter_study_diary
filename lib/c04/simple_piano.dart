@@ -6,7 +6,7 @@ class SimplePiano extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       context: context,
       content: TextButton(
         onPressed: () {

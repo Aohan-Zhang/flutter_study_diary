@@ -17,7 +17,7 @@ class _DicePageState extends State<DicePage> {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       context: context,
       content: Center(
         child: Column(

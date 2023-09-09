@@ -7,7 +7,7 @@ class FlexDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       title: "flex demo",
       context: context,
       content: Column(

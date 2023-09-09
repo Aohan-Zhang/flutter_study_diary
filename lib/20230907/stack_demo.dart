@@ -6,7 +6,7 @@ class StackDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       title: "stack demo",
       context: context,
       content: const Stack(

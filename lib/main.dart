@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study_diary/20230907/flex_demo.dart';
 import 'package:flutter_study_diary/20230907/stack_demo.dart';
 import 'package:flutter_study_diary/20230907/wrap_demo.dart';
+import 'package:flutter_study_diary/20230908/button_demo.dart';
+import 'package:flutter_study_diary/20230908/card_demo.dart';
 import 'package:flutter_study_diary/diary_layout.dart';
 import 'package:flutter_study_diary/c03/dice_page.dart';
 import 'package:flutter_study_diary/c01/layout_basic.dart';
@@ -25,7 +27,7 @@ class Catalogue extends StatefulWidget {
 class _CatalogueState extends State<Catalogue> {
   @override
   Widget build(BuildContext context) {
-    return DiaryLayout(
+    return CommonLayout(
       context: context,
       showBack: false,
       content: SingleChildScrollView(
@@ -50,6 +52,12 @@ class _CatalogueState extends State<Catalogue> {
                   catalogueItem(context: context, target: const FlexDemo()),
                   catalogueItem(context: context, target: const WrapDemo()),
                   catalogueItem(context: context, target: const StackDemo()),
+                ],
+              ),
+              diaryItem(
+                time: "2023年09月08日12:34:51",
+                content: [
+                  catalogueItem(context: context, target: const CardDemo()),
                 ],
               ),
             ],

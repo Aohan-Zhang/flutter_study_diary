@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class DiaryLayout extends StatelessWidget {
+class CommonLayout extends StatelessWidget {
   final BuildContext context;
   final Widget content;
   final bool showBack;
   final String title;
 
-  const DiaryLayout(
+  const CommonLayout(
       {super.key,
       required this.context,
       required this.content,
